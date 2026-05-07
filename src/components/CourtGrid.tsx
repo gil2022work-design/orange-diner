@@ -19,7 +19,7 @@ export function CourtGrid({ activeSport, reservas }: CourtGridProps) {
   useEffect(() => {
     async function fetchCanchas() {
       const { data } = await supabase
-        .from('canchas')
+        .from('courts')
         .select('*')
         .eq('deporte', activeSport)
         .eq('esta_disponible', true)
